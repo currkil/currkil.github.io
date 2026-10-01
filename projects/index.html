@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我的项目 · currkill</title>
+  <meta name="description" content="currkill 的项目列表，每一条都指向对应的 GitHub 仓库。">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<main class="page">
+
+  <nav class="crumbs">
+    <a href="../index.html">← 返回主页</a>
+  </nav>
+
+  <header class="hero hero--sub">
+    <h1 class="hero__name">我的项目</h1>
+    <p class="hero__tagline">点任意一条，前往对应的 GitHub 仓库。</p>
+  </header>
+
+  <!--
+    =====================================================================
+    ★ 怎么加一个新项目
+    =====================================================================
+    把下面任意一整段 <a class="project"> … </a> 复制一份，粘到列表里，
+    然后只改这四处：
+      1. href                  → 你的 GitHub 仓库地址
+      2. .project__name        → 项目名
+      3. .project__desc        → 一句话介绍
+      4. .project__tags 里的   → 技术标签，想加几个就复制几个 <span class="tag">
+
+    想删掉某个项目，就把那一整段 <a>…</a> 删掉。
+    =====================================================================
+  -->
+
+  <div class="projects">
+
+    <a class="project" href="https://github.com/currkil/currkil.github.io"
+       target="_blank" rel="noopener noreferrer">
+      <div class="project__body">
+        <span class="project__name">currkil.github.io</span>
+        <span class="project__desc">你正在看的这个个人主页，纯手写静态页面，无框架无依赖。</span>
+        <div class="project__tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+      </div>
+      <span class="project__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17 17 7"/>
+          <path d="M9 7h8v8"/>
+        </svg>
+      </span>
+    </a>
+
+    <!--
+      待填项目示例（把注释去掉就是一条新项目）：
+      <a class="project" href="https://github.com/currkil/仓库名"
+         target="_blank" rel="noopener noreferrer">
+        <div class="project__body">
+          <span class="project__name">项目名</span>
+          <span class="project__desc">一句话介绍这个项目。</span>
+          <div class="project__tags">
+            <span class="tag">语言</span>
+          </div>
+        </div>
+        <span class="project__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17 17 7"/>
+            <path d="M9 7h8v8"/>
+          </svg>
+        </span>
+      </a>
+    -->
+
+  </div>
+
+</main>
+
+<footer class="footer">
+  <p>© currkill</p>
+</footer>
+
+</body>
+</html>

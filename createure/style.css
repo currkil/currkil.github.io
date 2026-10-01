@@ -1,0 +1,65 @@
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #FBF8EB;
+  background-image: url("assets/main.png");
+  background-size: 80% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+footer {
+  position: absolute;
+  left: 219px;
+  bottom: 30px;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+/* 白色磨砂遮罩 */
+/*body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: -1;
+}*/
+
+.sidebar {
+  position: absolute;
+  left: 219px;
+  top: 461px;
+  width: 500px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 1rem;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.sidebar nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
