@@ -4,10 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>个人博客 · currkill</title>
-  <meta name="description" content="currkill 的个人博客。">
+  <meta name="description" content="currkill 的个人博客：折腾记录、笔记与随笔。">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+
+<!--
+  =====================================================================
+  ★ 怎么加一篇新文章（三步）
+  =====================================================================
+  1. 复制 blogs/posts/hello/ 整个文件夹，粘到 blogs/posts/ 下面，
+     改名成你想要的网址，例如 my-first-post（英文小写 + 连字符）。
+
+  2. 打开新文件夹里的 index.html，改这几处：
+        <title>             浏览器标签上的标题
+        <meta name="description">  搜索/分享时显示的摘要
+        .article__title     文章大标题
+        <time datetime="…"> 日期，datetime 用 2026-10-01 这种格式
+        .article__body      正文，想写多少段写多少段
+
+  3. 回到本文件，复制下面任意一整条 <a class="post"> … </a>，
+     粘到列表最上面（新文章放最上面），改这四处：
+        href              → ./posts/你的文件夹名/index.html
+        .post__title      → 文章标题
+        .post__excerpt    → 一句话摘要（太长会自动省略号）
+        <time>            → 日期
+
+  想删掉一篇文章，就把列表里那一条 <a>…</a> 删掉，
+  再删掉 blogs/posts/ 下对应的文件夹。
+  =====================================================================
+-->
 
 <main class="page">
 
@@ -17,18 +43,46 @@
 
   <header class="hero hero--sub">
     <h1 class="hero__name">个人博客</h1>
-    <p class="hero__tagline">随笔、笔记与折腾记录。</p>
+    <p class="hero__tagline">折腾记录、笔记与随笔。</p>
   </header>
 
-  <!--
-    这里目前只是占位。
-    以后要发布文章，可以有两种做法：
-      1. 每篇文章一个文件夹，例如 blogs/2025-01-01-hello/index.html，
-         再在下面把文章列表一条条写出来（和 projects 页一样的写法）。
-      2. 想用现成的博客框架（如 Hexo、Jekyll），告诉我，我帮你接。
-  -->
-  <div class="placeholder">
-    <p>博客还在搭建中，文章列表以后会放在这里。</p>
+  <!-- ================= 文章列表 =================
+       新的排在最上面。每条就是一篇，点击进入正文。
+       ============================================ -->
+  <div class="posts">
+
+    <a class="post" href="./posts/hello/index.html">
+      <div class="post__main">
+        <div class="post__title">博客开张了</div>
+        <div class="post__excerpt">这个博客是干什么的，以及以后会放些什么。</div>
+      </div>
+      <div class="post__aside">
+        <span class="post__date"><time datetime="2026-10-01">2026-10-01</time></span>
+        <span class="post__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 6l6 6-6 6"/>
+          </svg>
+        </span>
+      </div>
+    </a>
+
+    <a class="post" href="./posts/how-to-add-post/index.html">
+      <div class="post__main">
+        <div class="post__title">这个博客是怎么搭起来的</div>
+        <div class="post__excerpt">纯静态、无框架、无构建步骤，以及怎么往里加一篇新文章。</div>
+      </div>
+      <div class="post__aside">
+        <span class="post__date"><time datetime="2026-10-01">2026-10-01</time></span>
+        <span class="post__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 6l6 6-6 6"/>
+          </svg>
+        </span>
+      </div>
+    </a>
+
   </div>
 
 </main>
